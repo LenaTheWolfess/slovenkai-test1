@@ -1,0 +1,1 @@
+# ITAcademyTaskOsoba15102019Slovenkai
