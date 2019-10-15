@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript" src="./js/connector.js"></script>
+        <script type="text/javascript" src="./js/person.js"></script>
+    </head>
+    <body>
+        <h2>New person</h2>
+        <form>
+            Name: <input type="text" value="Name" id="txtFieldName"/><br/>
+            Age: <input type="number" value="" id="nmbFieldAge"/><br/>
+            Sex: <input type="text" value="male/female" id="txtFieldSex"/><br/>
+            <button type="button" id="btnNewPerson">Add</button>
+        </form>
+        <h2>Edit person</h2>
+        <form>
+            Name: <input type="text" value="" id="txtEdFieldName"/><br/>
+            Age: <input type="number" value="" id="nmbEdFieldAge"/><br/>
+            Sex: <input type="text" value="" id="txtEdFieldSex"/><br/>
+            <button type="button" id="btnEdPerson">Edit</button>
+            <button type="button" id="btnRePerson">Delete</button>
+        </form>
+        <div>
+            <h2>People</h2>
+            <div id="personList">
+            </div>
+        </div>
+    </body>
+</html>
