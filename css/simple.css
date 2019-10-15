@@ -1,0 +1,37 @@
+.fLabel {
+    position: relative;
+    left: 0px;
+    color: blue;
+    text-align: left;
+    background-color: blueviolet;
+}
+iLine {
+    display: block;
+    background-color: khaki;
+}
+.fInput {
+    position: relative;
+    width: 100%;
+}
+.iField {
+    color: black;
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+.newPerForm {
+    position: relative;
+    left: 30%;
+    width: 30%;
+    border: blue;
+    border-style: solid;
+    text-align: center;
+}
+.editPerForm {
+    position: relative;
+    left: 30%;
+    width: 30%;
+    border: blue;
+    border-style: solid;
+    text-align: center;
+}
