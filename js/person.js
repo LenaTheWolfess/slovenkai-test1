@@ -96,6 +96,7 @@ function hideEditing()
     if (buttonEditing)
         buttonEditing.classList.remove("pButtonF");
     hidden = true;
+    document.getElementById("warnEd").innerHTML = "";
 }
 
 function clearNewForm()
@@ -115,6 +116,7 @@ function addListeners()
     document.getElementById("btnNewPersonCancel").addEventListener("click", () => {
         document.getElementById("newPerForm").classList.add("hideEl");
         document.getElementById("showNewForm").classList.remove("hideEl");
+        document.getElementById("warnNew").innerHTML = "";
     });
     document.getElementById("btnEdPersonCancel").addEventListener("click", () => {
         hideEditing();
@@ -124,8 +126,11 @@ function addListeners()
         let age = +document.getElementById("nmbFieldAge").value;
         let sex = document.getElementById("selSex").value;
 
-        if (!name || !age || (sex != "male" && sex != "female"))
+        if (!name || !age || (sex != "male" && sex != "female")) {
+            document.getElementById("warnNew").innerHTML = "Invalid data";
             return;
+        }
+        document.getElementById("warnNew").innerHTML = "";
         
         let person = {};
         person.name = name;
@@ -146,9 +151,12 @@ function addListeners()
         let age = +document.getElementById("nmbEdFieldAge").value;
         let sex = document.getElementById("selEdSex").value;
 
-        if (!name || !age || (sex != "male" && sex != "female"))
+        if (!name || !age || (sex != "male" && sex != "female")) {
+            document.getElementById("warnEd").innerHTML = "Invalid data";
             return;
+        }
         
+        document.getElementById("warnEd").innerHTML = "";
         let person = {};
         person.name = name;
         person.age = age;

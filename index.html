@@ -16,14 +16,14 @@
                     <iLine><label class="fLabel">Age</label> <input class="iField" type="number" value="" id="nmbFieldAge"/></iLine>
                     <iLine>
                         <label class="fLabel">Sex</label> 
-                    <!--<input class="iField" type="text" value="" id="txtFieldSex"/>-->
-                        <select id="selSex">
+                        <select id="selSex" class="iField">
                             <option vlaue="male">male</option>
                             <option vlaue="female">female</option>
                         </select>
                     </iLine>
                     <button class="fButton" type="button" id="btnNewPerson">Add</button>
                     <button class="fButton" type="button" id="btnNewPersonCancel">Cancel</button>
+                    <iLine><label id="warnNew" class="warn"></label></iLine>
                 </div>
             </form>
         </div>
@@ -34,8 +34,7 @@
                     <iLine><label class="fLabel">Age</label><input class="iField" type="number" value="" id="nmbEdFieldAge"/></iLine>
                     <iLine>
                         <label class="fLabel">Sex</label>
-                        <!--<input class="iField" type="text" value="" id="txtEdFieldSex"/> -->
-                        <select id="selEdSex">
+                        <select id="selEdSex" class="iField">
                             <option vlaue="male">male</option>
                             <option vlaue="female">female</option>
                         </select>
@@ -43,6 +42,7 @@
                     <button class="fButton" type="button" id="btnEdPerson">Edit</button>
                     <button class="fButton" type="button" id="btnRePerson">Delete</button>
                     <button class="fButton" type="button" id="btnEdPersonCancel">Cancel</button>
+                    <iLine><label id="warnEd" class="warn"></label></iLine>
                 </div>
             </form>
         </div>
