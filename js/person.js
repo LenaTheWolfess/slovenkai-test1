@@ -126,7 +126,7 @@ function addListeners()
         let age = +document.getElementById("nmbFieldAge").value;
         let sex = document.getElementById("selSex").value;
 
-        if (!name || !age || (sex != "male" && sex != "female")) {
+        if (!name || !age || age < 0 || age > 200 || (sex != "male" && sex != "female")) {
             document.getElementById("warnNew").innerHTML = "Invalid data";
             return;
         }
@@ -151,7 +151,7 @@ function addListeners()
         let age = +document.getElementById("nmbEdFieldAge").value;
         let sex = document.getElementById("selEdSex").value;
 
-        if (!name || !age || (sex != "male" && sex != "female")) {
+        if (!name || !age || age < 0 || age > 200 || (sex != "male" && sex != "female")) {
             document.getElementById("warnEd").innerHTML = "Invalid data";
             return;
         }
