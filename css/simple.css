@@ -1,13 +1,57 @@
 .fLabel {
-    position: relative;
+    position: inherit;
     left: 0px;
     color: blue;
     text-align: left;
-    background-color: blueviolet;
+    margin-left: 5px;
+}
+.hideEl {
+    display: none;
+}
+.fButton {
+    background-color: mediumblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+    position: inherit;
+    width: 80%;
+    margin: 3px;
+    left: 10%;
+}
+.fButton:hover {
+    background-color: lightblue;
+    color: mediumblue;
+}
+.fMiddle {
+    text-align: center;
+}
+.lMiddle {
+    text-align: center;
+}
+.pList {
+    position: inherit;
+    width: 100%;
+}
+.pButton {
+    display: block;
+    width: 100%;
+    background-color: lightgray;
+}
+.pButtonF {
+    background-color: lightskyblue;
+}
+.pButton:hover {
+    background-color: lightskyblue;
+}
+.listSection {
+    position: absolute;
+    left: 30%;
+    width: 30%;
 }
 iLine {
     display: block;
-    background-color: khaki;
 }
 .fInput {
     position: relative;
@@ -15,9 +59,17 @@ iLine {
 }
 .iField {
     color: black;
+    background-color: lightgray;
     position: absolute;
     right: 0px;
     width: 50%;
+}
+.iField:hover {
+    background-color: lightskyblue;
+    color: black;
+}
+.iField:focus {
+    background-color: lightskyblue;
 }
 .newPerForm {
     position: relative;
@@ -25,13 +77,11 @@ iLine {
     width: 30%;
     border: blue;
     border-style: solid;
-    text-align: center;
 }
 .editPerForm {
     position: relative;
-    left: 30%;
-    width: 30%;
+    left: 0%;
+    width: 100%;
     border: blue;
     border-style: solid;
-    text-align: center;
 }

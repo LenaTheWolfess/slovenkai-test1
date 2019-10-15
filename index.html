@@ -7,32 +7,34 @@
         <script type="text/javascript" src="./js/person.js"></script>
     </head>
     <body>
-        <div class = "newPerForm">
-            <h2>New person</h2>
+        <button class = "fButton newPerForm" type="button" id="showNewForm">New Person</button>
+        <div class = "newPerForm hideEl" id = "newPerForm">
+            <h2 class = "fMiddle">New person</h2>
             <form>
                 <div class="fInput">
-                    <iLine><label class="fLabel">Name</label> <input class="iField" type="text" value="Name" id="txtFieldName"/></iLine>
+                    <iLine><label class="fLabel">Name</label> <input class="iField" type="text" value="" id="txtFieldName"/></iLine>
                     <iLine><label class="fLabel">Age</label> <input class="iField" type="number" value="" id="nmbFieldAge"/></iLine>
-                    <iLine><label class="fLabel">Sex</label> <input class="iField" type="text" value="male/female" id="txtFieldSex"/></iLine>   
-                    <button type="button" id="btnNewPerson">Add</button>
+                    <iLine><label class="fLabel">Sex</label> <input class="iField" type="text" value="" id="txtFieldSex"/></iLine>   
+                    <button class="fButton" type="button" id="btnNewPerson">Add</button>
+                    <button class="fButton" type="button" id="btnNewPersonCancel">Cancel</button>
                 </div>
             </form>
         </div>
-        <div class = "editPerForm">
-            <h2>Edit person</h2>
+        <div class = "editPerForm hideEl" id = "editPerForm">
             <form>
                 <div class="fInput">
-                    <iLine><fLabel>Name</fLabel><input class="iField" type="text" value="" id="txtEdFieldName"/></iLine>
-                    <iLine><fLabel>Age</fLabel><input class="iField" type="number" value="" id="nmbEdFieldAge"/></iLine>
-                    <iLine><fLabel>Sex</fLabel><input class="iField" type="text" value="" id="txtEdFieldSex"/></iLine>
-                    <button type="button" id="btnEdPerson">Edit</button>
-                    <button type="button" id="btnRePerson">Delete</button>
+                    <iLine><label class="fLabel">Name</label><input class="iField" type="text" value="" id="txtEdFieldName"/></iLine>
+                    <iLine><label class="fLabel">Age</label><input class="iField" type="number" value="" id="nmbEdFieldAge"/></iLine>
+                    <iLine><label class="fLabel">Sex</label><input class="iField" type="text" value="" id="txtEdFieldSex"/></iLine>
+                    <button class="fButton" type="button" id="btnEdPerson">Edit</button>
+                    <button class="fButton" type="button" id="btnRePerson">Delete</button>
+                    <button class="fButton" type="button" id="btnEdPersonCancel">Cancel</button>
                 </div>
             </form>
         </div>
-        <div id = "listSection">
-            <h2>People</h2>
-            <div id="personList">
+        <div class="listSection">
+            <h2 class="lMiddle">People</h2>
+            <div class="pList" id="personList">
             </div>
         </div>
     </body>
