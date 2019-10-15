@@ -33,7 +33,7 @@ function reloadData()
 
 function formatDataForHtml(data)
 {
-    return "" + data.name + "<br>" + data.age + " years old<br>" + data.sex;
+    return "<div class='name'>" + data.name + "</div>" + data.age + " years old<br>" + data.sex;
 }
 
 function updateButton(button, data)
