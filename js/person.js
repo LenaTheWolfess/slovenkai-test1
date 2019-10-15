@@ -74,7 +74,7 @@ function addToHtml(data)
         objectEditing.appendChild(edF);
         document.getElementById("txtEdFieldName").value = data.name;
         document.getElementById("nmbEdFieldAge").value = data.age;
-        document.getElementById("txtEdFieldSex").value = data.sex;
+        document.getElementById("selEdSex").value = data.sex;
         hidden = false;
     });
 
@@ -86,7 +86,7 @@ function clearEditFields()
 {
     document.getElementById("txtEdFieldName").value = "";
     document.getElementById("nmbEdFieldAge").value = "";
-    document.getElementById("txtEdFieldSex").value = "";
+    document.getElementById("selEdSex").value = "male";
 }
 
 function hideEditing()
@@ -98,14 +98,23 @@ function hideEditing()
     hidden = true;
 }
 
+function clearNewForm()
+{
+    document.getElementById("txtFieldName").value = "";
+    document.getElementById("nmbFieldAge").value = "";
+    document.getElementById("selSex").value = "male";
+}
+
 function addListeners()
 {
     document.getElementById("showNewForm").addEventListener("click", () => {
+        clearNewForm();
         document.getElementById("newPerForm").classList.remove("hideEl");
         document.getElementById("showNewForm").classList.add("hideEl");
     });
     document.getElementById("btnNewPersonCancel").addEventListener("click", () => {
         document.getElementById("newPerForm").classList.add("hideEl");
+        document.getElementById("showNewForm").classList.remove("hideEl");
     });
     document.getElementById("btnEdPersonCancel").addEventListener("click", () => {
         hideEditing();
@@ -113,9 +122,9 @@ function addListeners()
     document.getElementById("btnNewPerson").addEventListener("click", () => {
         let name = document.getElementById("txtFieldName").value.trim();
         let age = +document.getElementById("nmbFieldAge").value;
-        let sex = document.getElementById("txtFieldSex").value;
+        let sex = document.getElementById("selSex").value;
 
-        if (!name || !age || !sex)
+        if (!name || !age || (sex != "male" && sex != "female"))
             return;
         
         let person = {};
@@ -124,11 +133,6 @@ function addListeners()
         person.sex = sex;
         
         g_connector.AddData(person, handleInsertedData);
-
-         // Clear fields
-         document.getElementById("txtFieldName").value = "";
-         document.getElementById("nmbFieldAge").value = "";
-         document.getElementById("txtFieldSex").value = "";
 
          // Hide form
         document.getElementById("newPerForm").classList.add("hideEl");
@@ -140,9 +144,9 @@ function addListeners()
 
         let name = document.getElementById("txtEdFieldName").value.trim();
         let age = +document.getElementById("nmbEdFieldAge").value;
-        let sex = document.getElementById("txtEdFieldSex").value;
+        let sex = document.getElementById("selEdSex").value;
 
-        if (!name || !age || !sex)
+        if (!name || !age || (sex != "male" && sex != "female"))
             return;
         
         let person = {};
@@ -165,12 +169,15 @@ function addListeners()
         let toDelete = objectEditing;
         // Clear fields
         clearEditFields();
+        document.body.appendChild(document.getElementById("editPerForm"));
+        hideEditing();
         parent.removeChild(toDelete);
 
         idEditing = undefined;
         buttonEditing = undefined;
         objectEditing = undefined;
         formEditing = undefined;
+        hidden = false;
     });
 }
 window.onload = () => {
